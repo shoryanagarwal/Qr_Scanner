@@ -4844,3 +4844,59 @@ a {
     }
 
 }
+
+/* =========================
+   MOBILE / PORTRAIT
+========================= */
+
+@media (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 100%;
+        margin: auto;
+    }
+
+    .hero {
+        min-height: 100svh;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .about-content,
+    .about-section,
+    .events-grid,
+    .specialities-grid,
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image img,
+    .team-member img,
+    video {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .contact-content {
+        flex-direction: column;
+    }
+}
