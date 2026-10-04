@@ -20,7 +20,7 @@ function Admin() {
     // =========================
     // TODAY'S ATTENDANCE
     // =========================
-
+const API_URL = import.meta.env.VITE_API_URL;
     const [attendance, setAttendance] = useState(null);
     const [attendanceLoading, setAttendanceLoading] = useState(false);
     const [attendanceError, setAttendanceError] = useState("");
@@ -63,7 +63,7 @@ function Admin() {
 
         try {
             const response = await axios.get(
-                "http://localhost:5000/api/admin/attendance"
+                `${API_URL}/api/admin/attendance`
             );
 
             if (response.data.success) {
@@ -97,7 +97,7 @@ function Admin() {
 
         try {
             const response = await axios.get(
-                "http://localhost:5000/api/admin/attendance/history"
+                `${API_URL}/api/admin/attendance/history`
             );
 
             if (response.data.success) {
@@ -145,7 +145,7 @@ function Admin() {
 
         try {
             const response = await axios.post(
-                "http://localhost:5000/api/admin/login",
+                `${API_URL}/api/admin/login`,
                 {
                     username,
                     password
@@ -192,7 +192,7 @@ function Admin() {
 
         try {
             const response = await axios.get(
-                `http://localhost:5000/api/admin/attendance/history/${date}`
+                `${API_URL}/api/admin/attendance/history/${date}`
             );
 
             if (response.data.success) {
@@ -276,7 +276,7 @@ function Admin() {
 
                             const response =
                                 await axios.post(
-                                    "http://localhost:5000/api/admin/scan",
+                                    `${API_URL}/api/admin/scan`,
                                     {
                                         qrToken: decodedText
                                     }
