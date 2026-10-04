@@ -3994,7 +3994,7 @@ a {
 
 .start-scanner-button,
 .stop-scanner-button,
-.scan-again-button {
+.scan-another-button {
     width: 100%;
 
     margin-top: 20px;
@@ -4009,17 +4009,50 @@ a {
     letter-spacing: 1px;
 
     cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
+
 .start-scanner-button,
-.scan-again-button {
+.scan-another-button {
     background: #8b1e23;
     color: white;
 }
 
+
 .start-scanner-button:hover,
-.scan-again-button:hover {
+.scan-another-button:hover {
     background: #6f151a;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 8px 20px rgba(139, 30, 35, 0.18);
+}
+
+
+.stop-scanner-button {
+    background: #5b3926;
+    color: white;
+}
+
+
+.stop-scanner-button:hover {
+    background: #452a1d;
+}
+
+
+/* ARROW */
+
+.start-scanner-button span,
+.scan-another-button span {
+    margin-left: 8px;
+
+    font-size: 16px;
 }
 
 .stop-scanner-button {
